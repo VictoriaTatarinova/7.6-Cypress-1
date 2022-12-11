@@ -1,0 +1,19 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open --config-file",
+    "test:cypress": "cypress open --browser chrome",
+    "test:allHeaded": "cypress run --headed --browser chrome --config-file cypress.desktop.js",
+    "test:allHeadless": "npx cypress run --headless -b chrome",
+    "test:allHeadedEdge": "cypress run --headed --browser edge --config-file cypress.mobile.js",
+    "test:spec": "cypress run --headed --browser edge --spec cypress/e2e/Book.cy.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^10.11.0"
+  }
+}

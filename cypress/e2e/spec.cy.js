@@ -24,6 +24,17 @@ describe("Test add books", () => {
 
   it("Delete books in favorite", () => {
     cy.get("h4").click();
-    cy.deleteBook("Братство Кольца");
+    cy.deleteBook(
+      "Братство Кольца",
+      "С друзьями-хоббитами Сэмом, Мерри и Пиппином Фродо отправляется в обитель эльфов — Ривенделл, чтобы избавиться от опасного подарка",
+      "Дж. Р. Р. Толкина"
+      );
   });
+
+  it("Should login successfuly", () => {
+    cy.contains('Books list');
+    cy.login(mail, password);
+    cy.contains('Добро пожаловать bropet@mail.ru').should("be.visible");
+ });
+
 });

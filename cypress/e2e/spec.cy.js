@@ -33,8 +33,8 @@ describe("Test add books", () => {
 
   it("Should login successfuly", () => {
     cy.contains('Books list');
-    cy.login(mail, password);
+    cy.login("bropet@mail.ru", "123");
     cy.contains('Добро пожаловать bropet@mail.ru').should("be.visible");
- });
+  });
 
 });
